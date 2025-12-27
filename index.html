@@ -176,13 +176,15 @@
 <p style="margin-top:12px; text-align:center;">
 
   🚨 <strong>Urgent job?</strong><br>
-  <a href="https://wa.me/27662452412"
-     style="display:inline-block;margin-top:8px;padding:12px 18px;
-            background:#25D366;color:#061022;
-            border-radius:14px;font-weight:700;"
-     target="_blank">
-    💬 WhatsApp us now
-  </a>
+<a href="https://wa.me/27662452412"
+   target="_blank"
+   rel="noopener"
+   style="display:inline-block;margin-top:8px;padding:12px 18px;
+          background:#25D366;color:#061022;
+          border-radius:14px;font-weight:700;">
+  💬 WhatsApp us now
+</a>
+
 </p>
 
 </div>
@@ -195,6 +197,24 @@
      rel="noopener">
     💬 WhatsApp <small>Urgent? Chat now</small>
   </a>
+<script>
+  // Track WhatsApp clicks (GA4)
+  document.addEventListener("DOMContentLoaded", function () {
+    var waLinks = document.querySelectorAll('a[href^="https://wa.me/"]');
+
+    waLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (typeof gtag === "function") {
+          gtag("event", "whatsapp_click", {
+            link_url: link.href,
+            link_text: (link.textContent || "").trim(),
+            page_location: window.location.href
+          });
+        }
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
