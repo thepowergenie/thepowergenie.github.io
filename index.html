@@ -51,34 +51,35 @@
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:14px;
+  gap:18px;
   position:sticky;
   top:0;
   backdrop-filter: blur(10px);
   background:rgba(5,8,18,.55);
   border-bottom:1px solid rgba(35,49,84,.5);
-  padding:10px 22px;
+  padding:14px 22px;
   z-index:1000;
-
-  min-height:120px; /* taller header for bigger logo */
+  min-height:150px;
 }
 
 .brand{
   display:flex;
   align-items:center;
   gap:18px;
+  flex:1;
 }
-    
+
 .brand img{
-  height:120px;
+  height:130px;
   width:auto;
   display:block;
   object-fit:contain;
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.10);
-  border-radius: 14px;
-  padding: 10px;
+  padding:0;            /* remove extra padding */
+  background:transparent;
+  border:none;
 }
+
+nav{ flex-shrink:0; }
 
     .brand .t{line-height:1.1}
     .brand .t strong{display:block;letter-spacing:.2px}
