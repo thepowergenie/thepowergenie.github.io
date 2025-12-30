@@ -148,6 +148,43 @@ nav{ flex-shrink:0; }
   width:100%;
   border:0;
 }
+    /* === Contact buttons upgrade === */
+.contact{
+  display:grid;
+  gap:12px;
+  margin-top:12px;
+}
+
+.contact a{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 16px;
+  border-radius:16px;
+  font-weight:750;
+  border:1px solid rgba(35,49,84,.85);
+  background:linear-gradient(180deg, rgba(17,26,46,.9), rgba(10,16,32,.9));
+  color:var(--text);
+  transition:all .2s ease;
+}
+
+.contact a span:last-child{
+  font-weight:700;
+  opacity:.9;
+}
+
+.contact a:hover{
+  transform:translateY(-1px);
+  box-shadow:0 10px 24px rgba(0,0,0,.35);
+}
+
+.contact a.call{ border-left:4px solid var(--accent2); }
+.contact a.wa{
+  border-left:4px solid var(--wa);
+  background:linear-gradient(180deg, rgba(37,211,102,.18), rgba(17,26,46,.9));
+}
+.contact a.email{ border-left:4px solid var(--accent); }
+
  </style>
 </head>
 
@@ -241,11 +278,23 @@ nav{ flex-shrink:0; }
       <h2>Contact</h2>
       <div class="small">Fastest response is WhatsApp. If it’s urgent, send a message with your area + the problem.</div>
 
-      <div class="contact">
-        <a href="tel:+27662452412"><span>📞 Call</span><span style="color:var(--muted)">066 245 2412</span></a>
-        <a href="https://wa.me/27662452412" target="_blank" rel="noopener"><span>💬 WhatsApp</span><span style="color:var(--muted)">066 245 2412</span></a>
-        <a href="mailto:info@thepowergenie.co.za"><span>✉️ Email</span><span style="color:var(--muted)">info@thepowergenie.co.za</span></a>
-      </div>
+   <div class="contact">
+  <a class="call" href="tel:+27662452412">
+    <span>📞 Call</span>
+    <span>066 245 2412</span>
+  </a>
+
+  <a class="wa" href="https://wa.me/27662452412" target="_blank" rel="noopener">
+    <span>💬 WhatsApp</span>
+    <span>066 245 2412</span>
+  </a>
+
+  <a class="email" href="mailto:info@thepowergenie.co.za">
+    <span>✉️ Email</span>
+    <span>info@thepowergenie.co.za</span>
+  </a>
+</div>
+
 <h2 style="margin-top:24px;">Send us a message</h2>
 
 <div style="
